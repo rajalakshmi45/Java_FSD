@@ -54,7 +54,8 @@ public class ProjectController {
 		model.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		ProjectDto pDto = model.map(projectreq, ProjectDto.class);		
 		ProjectDto tempDto = service.saveProject(pDto);		
-		CreateProjectResponseModel proRes = model.map(tempDto, CreateProjectResponseModel.class);		
+		CreateProjectResponseModel proRes = model.map(tempDto, CreateProjectResponseModel.class);	
+		System.out.println();
     	return ResponseEntity.status(HttpStatus.CREATED).body(proRes);
     }
     

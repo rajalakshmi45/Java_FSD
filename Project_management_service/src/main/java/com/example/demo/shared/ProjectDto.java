@@ -12,6 +12,7 @@ public class ProjectDto {
 	private String pmanager;
 	private String sDate;
 	private String eDate;
+	private int task_id;
 
 	public ProjectDto() {
 		super();
@@ -36,6 +37,19 @@ public class ProjectDto {
 		this.pmanager = pmanager;
 		this.sDate = sDate;
 		this.eDate = eDate;
+	}
+	
+
+	public ProjectDto(String pid, String pname, String plocation, Date start_date, Date end_date, String pmanager,
+			int task_id) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.plocation = plocation;
+		this.start_date = start_date;
+		this.end_date = end_date;
+		this.pmanager = pmanager;
+		this.task_id = task_id;
 	}
 
 	public String getPid() {
@@ -100,6 +114,14 @@ public class ProjectDto {
 
 	public void seteDate(String eDate) {
 		this.eDate = eDate;
+	}
+
+	public int getTask_id() {
+		return task_id;
+	}
+
+	public void setTask_id(int task_id) {
+		this.task_id = task_id;
 	}
 
 }

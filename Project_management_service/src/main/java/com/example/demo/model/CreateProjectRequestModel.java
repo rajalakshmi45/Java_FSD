@@ -10,17 +10,24 @@ public class CreateProjectRequestModel {
 	private Date end_date;
 	private String sDate;
 	private String eDate;
+	private String pmanager;
+	private int task_id;
 
 	public CreateProjectRequestModel() {
 		super();
 	}
 
-	public CreateProjectRequestModel(String pname, String plocation, String sDate, String eDate) {
+	public CreateProjectRequestModel(String pname, String plocation, Date start_date, Date end_date, String sDate,
+			String eDate, String pmanager, int task_id) {
 		super();
 		this.pname = pname;
 		this.plocation = plocation;
+		this.start_date = start_date;
+		this.end_date = end_date;
 		this.sDate = sDate;
 		this.eDate = eDate;
+		this.pmanager = pmanager;
+		this.task_id = task_id;
 	}
 
 	public String getPname() {
@@ -69,6 +76,22 @@ public class CreateProjectRequestModel {
 
 	public void seteDate(String eDate) {
 		this.eDate = eDate;
+	}
+
+	public String getPmanager() {
+		return pmanager;
+	}
+
+	public void setPmanager(String pmanager) {
+		this.pmanager = pmanager;
+	}
+
+	public int getTask_id() {
+		return task_id;
+	}
+
+	public void setTask_id(int task_id) {
+		this.task_id = task_id;
 	}
 
 }
