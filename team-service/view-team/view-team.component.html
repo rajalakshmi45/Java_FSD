@@ -1,0 +1,7 @@
+<table>
+        <tr *ngFor="let name of tDetails">
+          <td>{{ name.email }}</td>
+          <td><button (click)="update(name.email)">Update</button></td>
+          <td><button (click)="delete(name.email)">Delete</button></td>
+        </tr>
+</table>
